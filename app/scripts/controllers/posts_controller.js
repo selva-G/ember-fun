@@ -47,7 +47,11 @@ Blogger.PostsController = Ember.ArrayController.extend({
     console.log(xxx);
     return xxx;
     }
-  }.property('content.length')
+  }.property('content.length'),
+
+  gravatarUrl: function(){
+    return "http://www.gravatar.com/avatar/"+MD5('selvaganeshbsg@ymail.com')+"&s=200";
+  }.property()
 
 });
 

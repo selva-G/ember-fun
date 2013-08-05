@@ -1,15 +1,16 @@
 
-<h4> Recent Posts </h4>
+<div class="span12" style="margin-bottom: 30px;">
+<h4 class="cursive"> Recent Posts </h4>
 {{#each recentPosts}}
 <div class="span12">
   {{#linkTo 'post' this}}{{name}}{{/linkTo}}
 </div>  
 {{/each}}
+</div>
 
 
-
-
-<h4> Archives </h4>
+<div class="span12" style="margin-bottom: 30px;">
+<h4 class="cursive"> Archives </h4>
 {{#each year in _content itemController="yearItem"}}
   <div class="span12">
   <a {{action toggleProperty 'isExpanded'}}> {{#if isExpanded}} <small>&nbsp; v &nbsp;</small> {{else}}<small>&nbsp; > &nbsp;</small>{{/if}}  {{year.key}}</a>
@@ -28,4 +29,5 @@
   {{/each}}
   {{/if}}
   </div>
-{{/each}}
+  {{/each}}
+</div>
