@@ -13,11 +13,11 @@
 <h4 class="cursive"> Blog Archive </h4>
 {{#each archives itemController="yearItem"}}
   <div class="span12">
-    <a {{action toggleProperty 'isExpanded'}}> {{#if isExpanded}} <small>&nbsp; v &nbsp;</small> {{else}}<small>&nbsp; > &nbsp;</small>{{/if}}  {{key}}</a> ({{totalYearPosts}})
+    <div class="span12"><a {{action toggleProperty 'isExpanded'}}><i {{bindAttr class="isExpanded:icon-chevron-down:icon-chevron-right"}}></i>  {{key}}</a><span class="muted"> ({{totalYearPosts}}) </span></div>
   {{#if isExpanded}}
   {{#each value itemController="monthItem"}}
   <div class="span12" style="margin-left: 10px;">
-    <a {{action toggleProperty 'isExpanded'}}> {{#if isExpanded}} <small>&nbsp; v &nbsp;</small> {{else}}<small>&nbsp; > &nbsp;</small>{{/if}} {{key}}</a> ({{value.length}})
+    <div class="span12"><a {{action toggleProperty 'isExpanded'}}> <i {{bindAttr class="isExpanded:icon-chevron-down:icon-chevron-right"}}></i> {{key}}</a> <span class="muted"> ({{value.length}}) </span></div>
     {{#if isExpanded}}
     {{#each value}}
     <div class="span12" style="margin-left: 30px;">
