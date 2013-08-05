@@ -8,7 +8,7 @@ Blogger.PostsController = Ember.ArrayController.extend({
       return content.slice(0,5);
   }.property('content.length'),
 
-  _content: function(){
+  archives: function(){
     var content = this.get('content.content'),
         tempMonth, 
         tempYear, 
@@ -57,11 +57,18 @@ Blogger.PostsController = Ember.ArrayController.extend({
 
 
 Blogger.YearItemController = Ember.ObjectController.extend({
-  isExpanded: false
+  isExpanded: false,
+  totalYearPosts: function(){
+    var totalPosts = 0;
+    
+    this.get('content.value').forEach(function(post,idx){
+      totalPosts += post.get('value.length');
+    })
+    return totalPosts;
+  }.property()
 });
 
 Blogger.MonthItemController = Ember.ObjectController.extend({
   isExpanded: false
 });
-
 
