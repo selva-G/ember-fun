@@ -1,5 +1,10 @@
-var Blogger = window.Blogger = Ember.Application.create();
-
+var Blogger = window.Blogger = Ember.Application.create({
+    LOG_BINDINGS                  : true,
+    LOG_TRANSITIONS               : true,
+    LOG_TRANSITIONS_INTERNAL      : true,
+    LOG_VIEW_LOOKUPS              : true,
+    LOG_ACTIVE_GENERATION         : true
+});
 
 
 

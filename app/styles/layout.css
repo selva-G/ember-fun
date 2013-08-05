@@ -1,0 +1,11 @@
+a {
+  cursor: pointer;
+}
+a:hover {
+  text-decoration: none;
+}
+
+a.active {
+  color: #B94A48;
+  font-size: 15px;
+}

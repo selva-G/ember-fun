@@ -1,2 +1,11 @@
-<h2>Welcome to Ember.js</h2>
-{{outlet}}
+<div class="row-fluid" style="margin: 50px;">
+  <div class="span2">
+    {{outlet 'LHS'}}
+  </div>
+  <div class="span8">
+    {{outlet 'details'}}
+  </div>
+  <div class="span2">
+    {{outlet 'RHS'}}
+  </div>
+</div>

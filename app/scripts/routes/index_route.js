@@ -8,6 +8,13 @@ Blogger.IndexRoute = Ember.Route.extend({
 Blogger.PostsRoute = Ember.Route.extend({
   model: function() {
     return Blogger.Post.find();
+  },
+  setupController: function(controller,model){
+    this._super(controller,model);
+  },
+
+  renderTemplate: function(){
+    this.render({into: 'application', outlet: 'RHS'})
   }
 });
 
@@ -17,5 +24,8 @@ Blogger.PostRoute = Ember.Route.extend({
   },
   serialize: function(model){
     return {id: model.id};
+  },
+  renderTemplate: function(){
+    this.render({into: 'application', outlet: 'details'})
   }
 });
