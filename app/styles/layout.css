@@ -10,7 +10,7 @@ a:hover {
 
 a.active {
   color: #e64d33;
-  font-size: 15px;
+  font-size: 16px;
 }
 
 .container {
@@ -22,4 +22,10 @@ a.active {
 
 .cursive {
   font-family: cursive;
+}
+
+.legend {
+  color: #aaa;
+  font-size: 18px;
+  margin-top: 15px;
 }
