@@ -14,7 +14,7 @@ Blogger.PostsRoute = Ember.Route.extend({
   },
 
   renderTemplate: function(){
-    this.render({into: 'application', outlet: 'RHS'})
+    this.render({into: 'application', outlet: 'LHS'})
   }
 });
 

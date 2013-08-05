@@ -2,6 +2,12 @@
 Blogger.PostsController = Ember.ArrayController.extend({
   months: ['January','Feburary','March','April','May','June','July','August','September','October','November','December'],
 
+  recentPosts: function(){
+    var content = this.get('content.content');
+    if(!Em.isEmpty(content))
+      return content.slice(0,5);
+  }.property('content.length'),
+
   _content: function(){
     var content = this.get('content.content'),
         tempMonth, 

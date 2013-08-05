@@ -1,5 +1,16 @@
 
-  {{#each year in _content itemController="yearItem"}}
+<h4> Recent Posts </h4>
+{{#each recentPosts}}
+<div class="span12">
+  {{#linkTo 'post' this}}{{name}}{{/linkTo}}
+</div>  
+{{/each}}
+
+
+
+
+<h4> Archives </h4>
+{{#each year in _content itemController="yearItem"}}
   <div class="span12">
   <a {{action toggleProperty 'isExpanded'}}> {{#if isExpanded}} <small>&nbsp; v &nbsp;</small> {{else}}<small>&nbsp; > &nbsp;</small>{{/if}}  {{year.key}}</a>
   {{#if isExpanded}}
@@ -17,4 +28,4 @@
   {{/each}}
   {{/if}}
   </div>
-  {{/each}}
+{{/each}}
