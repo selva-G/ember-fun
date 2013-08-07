@@ -10,24 +10,5 @@
 
 
 <div class="span12" style="margin-bottom: 30px;">
-<h4 class="cursive"> Blog Archive </h4>
-{{#each archives itemController="yearItem"}}
-  <div class="span12">
-    <div class="span12"><a {{action toggleProperty 'isExpanded'}}><i {{bindAttr class="isExpanded:icon-chevron-down:icon-chevron-right"}}></i>  {{key}}</a><span class="muted"> ({{totalYearPosts}}) </span></div>
-  {{#if isExpanded}}
-  {{#each value itemController="monthItem"}}
-  <div class="span12" style="margin-left: 10px;">
-    <div class="span12"><a {{action toggleProperty 'isExpanded'}}> <i {{bindAttr class="isExpanded:icon-chevron-down:icon-chevron-right"}}></i> {{key}}</a> <span class="muted"> ({{value.length}}) </span></div>
-    {{#if isExpanded}}
-    {{#each value}}
-    <div class="span12" style="margin-left: 30px;">
-      {{#linkTo 'post' this}}{{name}}{{/linkTo}}
-    </div>
-    {{/each}}
-    {{/if}}
-  </div>
-  {{/each}}
-  {{/if}}
-  </div>
-  {{/each}}
+  {{blog-archive content=content}}
 </div>
