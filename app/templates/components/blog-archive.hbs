@@ -1,5 +1,4 @@
 <h4 class="cursive"> Blog Archive </h4>
-{{log archives}}
 {{#each archives itemController="yearItem"}}
   <div class="span12">
     <div class="span12"><a {{action toggleProperty 'isExpanded'}}><i {{bindAttr class="isExpanded:icon-chevron-down:icon-chevron-right"}}></i>  {{key}}</a><span class="muted"> ({{totalYearPosts}}) </span></div>
@@ -18,5 +17,5 @@
   {{/each}}
   {{/if}}
   </div>
-  {{/each}}
+{{/each}}
 

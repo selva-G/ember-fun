@@ -3,5 +3,7 @@ dist
 .sass-cache
 .tmp
 *.swp
+*.swo
+*.DS_Store
 
 app/images/theme1.jpeg

@@ -1,4 +1,11 @@
 {
+  "predef": [
+    "Ember",
+    "Em",
+    "Blogger",
+    "MD5",
+    "DS"
+  ],
     "node": true,
     "browser": true,
     "esnext": true,

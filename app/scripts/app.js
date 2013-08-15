@@ -11,5 +11,6 @@ var Blogger = window.Blogger = Ember.Application.create({
 require('scripts/routes/*');
 require('scripts/models/*');
 require('scripts/controllers/*');
+require('scripts/components/*');
 require('scripts/views/*');
 require('scripts/router');

@@ -27,6 +27,6 @@ Blogger.PostRoute = Ember.Route.extend({
     return {id: model.id};
   },
   renderTemplate: function(){
-    this.render({into: 'application', outlet: 'details'})
+    this.render({into: 'application', outlet: 'details'});
   }
 });
